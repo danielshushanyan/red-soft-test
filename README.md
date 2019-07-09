@@ -1,10 +1,10 @@
-# install dependencies
+# Install dependencies
 $ npm install
 $ npm install gulp-cli -g
 $ npm install gulp -D
 
-# serve with hot reload at localhost:3000
+# Serve with hot reload at localhost:3000
 $ gulp
 
-# build for production and launch server
+# Build for production and launch server
 $ gulp build
