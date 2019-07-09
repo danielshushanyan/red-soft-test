@@ -1,0 +1,233 @@
+@import 'plugins';
+@import 'settings';
+@import 'elements';
+@import 'fonts';
+
+
+
+body {
+  font-family: Cera Round Pro DEMO, serif;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+.wrapper {
+  max-width: 1190px;
+  padding: 0 15px;
+  margin: 0 auto;
+}
+
+.mz-header {
+  position: absolute;
+  top: 20px;
+  left: 0;
+  right: 0;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+  &-logo {
+    height: 40px;
+    width: 200px;
+    flex: 0 0 200px;
+  }
+
+  &-nav {
+    flex: 1;
+  }
+
+  &-btn {
+    flex: 0 0 202px;
+  }
+}
+
+.mz-nav-list {
+  width: 100%;
+  display: flex;
+  justify-content: flex-end;
+  padding-right: 15px;
+
+  &-item {
+    margin: 0 20px;
+  }
+
+  &-link {
+    font-style: normal;
+    font-weight: normal;
+    font-size: 16px;
+    color: #FDFFFC;
+    text-decoration: none;
+    position: relative;
+    padding: 10px;
+    display: inline-block;
+
+    &:after {
+      color: #fafbfd;
+      content: '.';
+      position: absolute;
+      text-align: center;
+      width: 100%;
+      bottom: -5px;
+      left: 0;
+      right: 0;
+      font-weight: 600;
+      font-size: 20px;
+      opacity: 0;
+      transition: opacity 300ms linear;
+    }
+
+    &:hover {
+      &:after {
+        opacity: 1;
+      }
+    }
+  }
+}
+
+.mz-opportunities {
+  width: 100%;
+  background: url("../img/backgrounds/main-bg.png") top no-repeat;
+  overflow: hidden;
+}
+
+.mz-top-slider {
+  padding: 200px 15px 126px;
+  margin: 0 auto;
+  max-width: 770px;
+
+
+  &-item {
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    color: #fff;
+  }
+
+  &-title {
+    font-size: 35px;
+    line-height: 54px;
+    font-weight: 500;
+    margin: 0 0 40px;
+  }
+
+  &-description {
+    font-size: 24px;
+    line-height: 36px;
+    font-weight: 500;
+  }
+
+  &-btn {
+    margin: 65px auto 40px;
+  }
+}
+
+.mz-about {
+  display: flex;
+  max-width: 921px;
+  margin: 160px auto 0;
+  position: relative;
+
+  &-image {
+    flex: 0 0 300px;
+    height: 621px;
+    max-width: 300px;
+    margin: 0 0 90px;
+  }
+
+  &-desc {
+    flex: 1;
+    margin: 90px 0 0 65px;
+  }
+
+  &-ekg {
+    position: absolute;
+    right: -19vw;
+    bottom: -31%;
+    height: 480px;
+    width: 480px;
+  }
+
+  &-ekg-diagram {
+    max-width: 100%;
+    animation: rotate 10s infinite ease-in-out forwards;
+  }
+
+  &-ekg-beat, &-ekg-heart {
+    position: absolute;
+    margin: auto;
+    left: 0;
+    right: 0;
+    top: 0;
+    bottom: 0;
+  }
+
+  &-ekg-heart {
+    right: -15%;
+    top: -32px;
+    height: 40px;
+    width: 40px;
+    animation: beat 1.5s infinite linear forwards;
+  }
+}
+
+.mz-desc {
+  &-title {
+    font-size: 36px;
+    line-height: 54px;
+    color: #60759D;
+    margin: 0 0 30px;
+  }
+
+  &-text {
+    font-size: 16px;
+    line-height: 24px;
+    color: #60759D;
+  }
+
+  &-list {
+    padding: 21px 0 0 16px;
+    font-size: 16px;
+    line-height: 24px;
+    color: #60759D;
+  }
+
+  &-list-item {
+    margin: 0 0 6px;
+    position: relative;
+
+    &:before {
+      position: absolute;
+      content: '.';
+      left: -18px;
+      top: -11px;
+      color: #16AFE0;
+      font-size: 42px;
+    }
+  }
+
+  &-btn {
+    margin: 38px 0 0 ;
+  }
+}
+
+.clip {
+  height: 300px;
+  width: 100%;
+  clip-path: ellipse(65% 97% at 50% 107%);
+  background: #f1f4fc;
+}
+
+// ekg heart animation
+@keyframes beat {
+  0% {transform: scale(1);}
+  10% {transform: scale(1);}
+  50% {transform: scale(1.15);}
+  60% {transform: scale(1.05);}
+  75% {transform: scale(1.2);}
+}
+
+@keyframes rotate {
+  50% {transform: rotate(15deg);}
+}

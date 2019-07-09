@@ -1,0 +1,68 @@
+.btn {
+  width: 202px;
+  height: 63px;
+  border-radius: 30px;
+  font-size: 16px;
+  line-height: 0;
+  font-weight: normal;
+  text-decoration: none;
+  font-family: Cera Round Pro DEMO, serif;
+  color: #FAFBFD;
+  cursor: pointer;
+  transition: all 300ms ease-in-out;
+
+  &-outline {
+    border: 2px solid #5489C3;
+    background: transparent;
+
+    &:hover {
+      transform: scale(1.1) translateX(-10px);
+      background-color: #5489C3;
+    }
+  }
+
+  &-filled {
+    background-color: #E70067;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 16px;
+    line-height: 24px;
+    border: none;
+    &:hover {
+      transform: scale(1.1) translateY(-10px);
+      background-color: #C9005A;
+      box-shadow: 0 6px 33.2px rgba(231, 0, 103, 0.36);
+    }
+  }
+}
+
+.pagination {
+  border: 1px solid #5489C3;
+  height: 19px;
+  display: flex;
+  align-items: center;
+  padding: 0 11px;
+  width: fit-content;
+  margin: 0 auto;
+  border-radius: 16px;
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: -80px;
+
+  &-item {
+    border: 0;
+    background-color: #5489C3;
+    width: 16px;
+    height: 1px;
+    margin: 0 4px;
+    border-radius: 1px;
+    padding: 0 8px 1px;
+    cursor: pointer;
+  }
+
+  .active {
+    background-color: #FAFBFD;
+  }
+}
